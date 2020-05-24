@@ -1,0 +1,35 @@
+.SearchContainer{
+  @include absCenter();
+  text-align: center;
+  width: 100%;
+
+  &__main {
+    width: 80%;
+    margin: 0 auto 3rem;
+
+    input {
+      width: 60%;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__sub {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 3rem;
+
+    input {
+      width: 30%;
+      @include respond(phone) {
+        width: 45%;
+      }
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}

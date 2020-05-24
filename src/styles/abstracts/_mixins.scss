@@ -1,0 +1,29 @@
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content };
+  }
+
+  @if $breakpoint == tablet-port {
+    @media only screen and (max-width: 56.25em) { @content };
+  }
+
+  @if $breakpoint == tablet-landscape {
+    @media only screen and (max-width: 75em) { @content };
+  }
+}

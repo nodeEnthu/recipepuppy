@@ -1,0 +1,27 @@
+
+.Header {
+  display: flex;
+  position: relative;
+  
+  height: 6rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #0ccac4;
+  
+  &__search-wrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: white;
+  }
+
+  &__search-image {
+    @include absCenter();
+    width: 50%;
+    height: 50%;
+  }
+}

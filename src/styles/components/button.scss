@@ -1,0 +1,11 @@
+input[type="submit"] {
+  padding: 0.5rem 2rem;
+  border: 1px solid blue;
+  color: blue;
+}
+
+input[type="submit"]:disabled {
+  border: 1px solid darkgray;
+  background: lightgray;
+  color: black;
+}

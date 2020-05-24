@@ -1,0 +1,26 @@
+.ScreenOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  background:white;
+  transition: all 0.4s;
+  display: none;
+  
+  &--isActive {
+    opacity: 0.9;
+    z-index: 1;
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    display: block;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+  }
+}
+

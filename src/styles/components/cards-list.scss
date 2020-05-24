@@ -1,0 +1,17 @@
+.CardsList {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+
+  @include respond(tablet-port) {
+    width: 90vw;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include respond(phone) {
+    width: 90vw;
+    grid-template-columns: 1fr;
+  }
+}
