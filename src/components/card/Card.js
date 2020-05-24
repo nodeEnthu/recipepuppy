@@ -1,6 +1,6 @@
 import React from "react";
 const DEFAULT_IMG_SRC = "http://via.placeholder.com/300";
-class Card extends React.Component {
+class Card extends React.PureComponent {
 
   render() {
     const {card}  = this.props;

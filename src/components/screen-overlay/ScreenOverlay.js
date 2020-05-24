@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Cross from "./cross.svg";
-class ScreenOverlay extends React.Component {
+class ScreenOverlay extends React.PureComponent {
 
   render() {
     const {children, active } = this.props;

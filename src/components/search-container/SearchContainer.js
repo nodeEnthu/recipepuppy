@@ -2,7 +2,7 @@ import React from "react";
 import Input from  "../input/Input";
 import Button from "../button/Button";
 
-class SearchContainer extends React.Component {
+class SearchContainer extends React.PureComponent {
 
   render() {
     const { fillSearchParams, searchEnabled, getRecipes } = this.props;

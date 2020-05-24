@@ -16,7 +16,7 @@ class App extends React.Component {
       recipe: "",
       withIngredients: "",
       withoutIngredients: "",
-      recipeResults: [],
+      recipeResults: "",
       searchText: "Search food recipes"
     }
   }

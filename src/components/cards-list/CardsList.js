@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../card/Card";
-class CardsList extends React.Component {
+class CardsList extends React.PureComponent {
 
   render() {
     const {cards} = this.props;
