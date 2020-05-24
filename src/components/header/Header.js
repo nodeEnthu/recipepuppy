@@ -4,9 +4,9 @@ class Header extends React.Component {
 
   render() {
     return <header>
-    <div className="Header">
+    <div className="Header" onClick={this.props.toggleSearchOverlay}>
       <h3>{this.props.text}</h3>
-      <div className="Header__search-wrapper" onClick={this.props.toggleSearchOverlay}>
+      <div className="Header__search-wrapper">
         <img alt="search" className="Header__search-image" src= "/utils/search.png"></img>
       </div>
     </div>
