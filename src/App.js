@@ -13,9 +13,6 @@ class App extends React.Component {
 
     this.state = {
       searchOverlayActive: false,
-      recipe: "",
-      withIngredients: "",
-      withoutIngredients: "",
       recipeResults: "",
       searchText: "Search food recipes"
     }
@@ -27,19 +24,9 @@ class App extends React.Component {
     });
   }
 
-  fillSearchParams = (e) => {
-    const key = e.target.name;
-    const value =  e.target.value;
-    const newVal = value ? value.split(" ") : "";
-    this.setState({
-      ...this.state,
-      [key]: newVal
-    })
-  }
 
-  getRecipes = () => {
+  getRecipes = (recipe, withIngredients, withoutIngredients) => {
     this.toggleSearchOverlay();
-    const { recipe, withIngredients, withoutIngredients } = this.state;
     const queryParams = constructQueryParams(recipe, withIngredients, withoutIngredients);
     const targetUrl = `${SEARCH_API}${queryParams}`;
     const searchText = resolveTitle(recipe, withIngredients, withoutIngredients);
@@ -55,16 +42,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { searchOverlayActive, recipe, recipeResults, searchText } = this.state
+    const { searchOverlayActive, recipeResults, searchText } = this.state
     return (
       <div className="App">
         <Header text= {searchText} toggleSearchOverlay = {this.toggleSearchOverlay}/>
         <ScreenOverlay active= {searchOverlayActive} 
           toggleSearchOverlay = {this.toggleSearchOverlay}
         >
-          <SearchContainer fillSearchParams = { this.fillSearchParams } 
-            searchEnabled = { recipe }
-            getRecipes = { this.getRecipes }
+          <SearchContainer getRecipes = { this.getRecipes }
           />
         </ScreenOverlay>
         <div className="margin-top-3">
